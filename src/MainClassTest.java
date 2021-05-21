@@ -17,4 +17,10 @@ public class MainClassTest extends MainClass{
         Assert.assertEquals(getLocalNumber(), 14);
         System.out.println("Метод getLocalNumber возвращает значение 14");
     }
+    @Test
+    public void testGetClassNumber(){
+        int expected = 45;
+        int actual = getClassNumber() ;
+        Assert.assertTrue("Значение переменной class_number меньше, либо равно 45",actual > expected);
+    }
 }
