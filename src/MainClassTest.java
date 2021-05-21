@@ -23,4 +23,14 @@ public class MainClassTest extends MainClass{
         int actual = getClassNumber() ;
         Assert.assertTrue("Значение переменной class_number меньше, либо равно 45",actual > expected);
     }
+    @Test
+    public void testGetClassString(){
+        String var1 = "hello";
+        String var2 = "Hello";
+        if ((!getClassString().contains(var1)) && (!getClassString().contains(var2))){
+            Assert.fail("Строка \"class_string\" не содержит слов \"hello\" или \"Hello\" ");
+        }else{
+            System.out.println("Тест пройден успешно");
+        }
+    }
 }
